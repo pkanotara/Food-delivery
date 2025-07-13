@@ -1,0 +1,203 @@
+.navbar {
+    padding: 12px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.551);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    width: 100px;
+    cursor: pointer;
+}
+
+.navbar-menu {
+    display: flex;
+    margin-left:-200px;
+    gap: 35px;
+    list-style: none;
+    font-size: 20px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.navbar-menu a {
+    color: #2d2d2d;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.navbar-menu a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -4px;
+    background-color: #ff4f4f;
+    transition: width 0.3s ease;
+}
+
+.navbar-menu a:hover::after,
+.navbar-menu .active::after {
+    width: 100%;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+/* 🔍 Search Bar */
+.navbar-search-bar {
+    display: flex;
+    align-items: center;
+    background: #f5f5f5;
+    padding: 4px 15px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    max-width: 200px;
+}
+
+.navbar-search-bar input {
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 4px;
+    width: 100px;
+    font-size: 14px;
+}
+
+.navbar-search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* 🛒 Cart Icon */
+.navbar-cart {
+    position: relative;
+}
+
+.icon {
+    width: 22px;
+    cursor: pointer;
+}
+
+.navbar-search-icon .dot,
+.navbar-cart .dot {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(46, 218, 3);
+    border-radius: 50%;
+    top: -6px;
+    right: -6px;
+    border: 2px solid rgb(248, 248, 248);
+}
+
+/* 👤 Profile */
+.navbar-profile {
+    position: relative;
+}
+
+.nav-profile-dropdown {
+    position: absolute;
+    display: none;
+    right: 0;
+    flex-direction: column;
+    background-color: #ffffffef;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    width: 160px;
+    z-index: 10;
+}
+
+.navbar-profile:hover .nav-profile-dropdown {
+    display: flex;
+}
+
+.nav-profile-dropdown li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 6px 0;
+}
+
+.nav-profile-dropdown li:hover {
+    color: #ff4f4f;
+}
+
+/* 🍔 Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 22px;
+    height: 2px;
+    background-color: #333;
+}
+
+/* ✅ Responsive */
+@media (max-width: 950px) {
+    .navbar-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        border-radius: 0 0 12px 12px;
+        z-index: 999;
+    }
+
+    .navbar-menu.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar {
+        padding: 15px 25px;
+    }
+
+    .navbar-right {
+        gap: 15px;
+    }
+
+    .navbar-right button {
+        padding: 6px 16px;
+        font-size: 13px;
+    }
+
+    .navbar-search-bar {
+        max-width: 120px;
+    }
+
+    .navbar-search-bar input {
+        width: 80px;
+        font-size: 13px;
+    }
+}
