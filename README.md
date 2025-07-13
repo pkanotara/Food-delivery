@@ -1,3 +1,4 @@
+
 # 🍽️ Petpooja - Food Delivery Web App
 
 A full-stack food ordering web application inspired by Petpooja, built using **React.js**, **Node.js**, **Express.js**, and **MongoDB**. This app features a customer interface, admin dashboard, and backend API — all fully functional.
@@ -6,11 +7,12 @@ A full-stack food ordering web application inspired by Petpooja, built using **R
 
 ## 📂 Project Structure
 
+```
 mern-food-delivery-app/
-├── frontend/ # Customer-facing React app
-├── backend/ # Express.js API server
-└── admin/ # Admin dashboard to manage orders/products
-
+├── frontend/     # Customer-facing React app
+├── backend/      # Express.js API server
+└── admin/        # Admin dashboard to manage orders/products
+```
 
 ---
 
@@ -59,12 +61,72 @@ mern-food-delivery-app/
 ```bash
 git clone https://github.com/pkanotara/Petpooja-Food-delivery-.git
 cd Petpooja-Food-delivery-
+```
 
+---
 
+### 2. Set Up Backend
 
- Set Up Backend
-bash
-Copy
-Edit
+```bash
 cd backend
 npm install
+```
+
+#### Create a `.env` file in the backend folder:
+
+```
+PORT=5000
+MONGO_URL=your_mongo_connection_string
+JWT_SECRET=your_jwt_secret
+```
+
+```bash
+npm start
+```
+
+---
+
+### 3. Set Up Frontend
+
+```bash
+cd ../frontend
+npm install
+npm run dev
+```
+
+---
+
+### 4. Set Up Admin Dashboard
+
+```bash
+cd ../admin
+npm install
+npm run dev
+```
+
+---
+
+## 🔐 Environment Variables
+
+You must create a `.env` file in the `backend` directory. Here's a safe example:
+
+### `.env.example`
+
+```
+PORT=5000
+MONGO_URL=mongodb+srv://<username>:<password>@cluster.mongodb.net/dbname
+JWT_SECRET=your_jwt_secret_key
+```
+
+---
+
+
+---
+
+
+## 🙋‍♂️ Author
+
+**Pravin Kanotara**  
+GitHub: [@pkanotara](https://github.com/pkanotara)
+
+---
