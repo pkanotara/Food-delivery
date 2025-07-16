@@ -1,5 +1,5 @@
 
-# 🍽️ Petpooja - Food Delivery Web App
+# 🍽️ Food Delivery Web App
 
 A full-stack food ordering web application inspired by Petpooja, built using **React.js**, **Node.js**, **Express.js**, and **MongoDB**. This app features a customer interface, admin dashboard, and backend API — all fully functional.
 
