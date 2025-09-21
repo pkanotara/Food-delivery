@@ -8,7 +8,7 @@ A full-stack food ordering web application inspired by Petpooja, built using **R
 ## 📂 Project Structure
 
 ```
-mern-food-delivery-app/
+food-delivery-app/
 ├── frontend/     # Customer-facing React app
 ├── backend/      # Express.js API server
 └── admin/        # Admin dashboard to manage orders/products
@@ -59,8 +59,8 @@ mern-food-delivery-app/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/pkanotara/Petpooja-Food-delivery-.git
-cd Petpooja-Food-delivery-
+git clone https://github.com/pkanotara/Food-delivery.git
+cd Food-delivery
 ```
 
 ---
@@ -130,3 +130,4 @@ JWT_SECRET=your_jwt_secret_key
 GitHub: [@pkanotara](https://github.com/pkanotara)
 
 ---
+
